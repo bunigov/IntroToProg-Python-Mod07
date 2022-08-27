@@ -54,8 +54,16 @@ I also decided that I would follow a similar structure of using classes (Process
 To have some data to work with (and not wanting to hardcode the values), I reused the code from earlier weeks to create a list of dictionaries. This would contain Tasks and Priorities and represent a ToDo list. The list would be preinitialized by the application with the user having the option to add new tasks to it. 
 The code to add data to the list looked as shown in Figure 1 below.  It asks the user to first enter a task, then to enter a priority. After, it calls a function to append this data to the list, displays confirmation that it was added and shows the updated contents of the list.  I will demonstrate the UI later in this document. 
  
- ![Figure 1 ](docs/images/Figure1.png)
+<!-- ![Figure 1 ](docs/images/Figure1.png) -->
  
+```
+#Add data to the list - write
+    elif choice_str.strip() == '2' or choice_str.strip().lower() == 'add':
+        task, priority = IO.input_new_task_and_priority()
+        table_lst = Processor.add_data_to_list(task_to_add=task, priority=priority, list_of_rows=table_list)
+        IO.output_task_added()
+        IO.output_current_tasks_in_list(list_of_rows=table_list)  #show the updated contents of the list
+```
 **Figure 1** – Adding data to the list (code view)
 
 ## Saving to a Pickle File
@@ -63,7 +71,20 @@ Having data in a list (in memory), I was then able to work on the code to load t
 
 Couple things to note here. I decided that it would not make sense to same an empty list to a file so I added an if statement that would first check for this logical error and advise the user if the list was empty. Since the list of functions was growing, I intentionally left a couple print statements in this main portion of the code as they were not adding to the complexity. 
  
-  ![Figure 2 ](docs/images/Figure2.png)
+ <!-- ![Figure 2 ](docs/images/Figure2.png) -->
+ 
+ ```
+ #Save data to Pickle file
+    elif choice_str.strip() == '5' or choice_str.strip().lower() == 'save':
+        if len(table_list) == 0:
+            IO.output_error_attempting_to_save_empty_list()
+        else:
+            strFileToSaveTo = IO.input_pickle_to_save_to()
+            with open(strFileToSaveTo, "wb") as output_file:  #intentionally want to create new file each time
+                pickle.dump(table_list, output_file)  #automatic close        output_file.close()
+            print(bcolors.OKGREEN + "Data Saved to Pickle file " + strFileToSaveTo  + ". \n" + bcolors.ENDC)  # bolded
+            print(bcolors.BOLD + "Pickle File Located at " + bcolors.ENDC + os.getcwd() + "\\" + strFileToSaveTo)
+ ```
  
 **Figure 2** – Saving list data to Pickle file (code view)
 (import pickle statement at the top to enable pickling)
@@ -74,8 +95,32 @@ While I could see the file was written to the directory, I couldn’t validate i
 The code to load the file is shown in Figure 3 below.  The code first asks the user for filename of the Pickle file to load from. It attempts to read and load this file into a temporary objFileData object in memory (presenting a success message if successful), iterates through that object to get a dictionary row and then builds a table_list table object. It completes by presenting confirmation to the user of successful data load into the list and shows the contents of the list (code reuses from previous week’s as well as provided as an option if user just wants to the see the contents of the list). 
 The code uses structured error handling. All of the above commands are in a try block so if anything fails (e.g. file is not found), the below except block catches the error and presents information to the user gracefully advising them that their file cannot be found (as opposed to the application crashing)
  
-  ![Figure 3 ](docs/images/Figure3.png)
+ <!-- ![Figure 3 ](docs/images/Figure3.png) -->
  
+ ```
+ #Retrieve/load data from Pickle file, load back into the list
+    elif choice_str.strip() == '4' or choice_str.strip().lower() == 'load':
+        strFileToLoadFrom = IO.input_pickle_to_load_from()
+        try:
+            with open(strFileToLoadFrom, "rb") as input_file:
+                objFileData = pickle.load(input_file)  #automatic close        input_file.close()
+
+            IO.output_successful_data_load_pickle_to_memory(file = strFileToLoadFrom, objData = objFileData)
+
+            #Processor.load_pickle_into_list
+            # load back into the list
+            for elem in objFileData:
+                row = {"Task": elem["Task"], "Priority": elem["Priority"]}  # generate a dictionary
+                table_list.append(row)  # change to function and to use list of rows later
+
+            IO.output_successful_data_load_memory_to_list()
+            IO.output_current_tasks_in_list(list_of_rows=table_list)
+
+        except FileNotFoundError:
+            IO.output_error_no_such_file_to_load()
+
+        #finally:
+```
 **Figure 3** – Loading data from Pickle file (code view)
 (import pickle statement at the top to enable pickling)
 
@@ -87,13 +132,33 @@ The above functionality satisfied the requirements of the assignment to implemen
 I did some research and learned about using the ANSI code standard. Specific codes can be inserted into the print or input command to change text and background colors.  Following the following article, I created the same bcolors class (Figure 4 below). I had no need to change it, but it could be customized to any of the ANSI colors, depending on my needs. 
 https://stackoverflow.com/questions/287871/how-do-i-print-colored-text-to-the-terminal 
  
-  ![Figure 4 ](docs/images/Figure4.png) 
- 
+ <!-- ![Figure 4 ](docs/images/Figure4.png)  -->
+```
+class bcolors:  #for simplifying color display of messages
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+```
 **Figure 4** – Custom bcolors class for controlling formatting (code view)
 
 Using this custom class, I could then use more recognizable English names to format the output to the user. As shown in Figure 5 example below, I display a “task successfully added” message in green to the user. 
 
- ![Figure 5 ](docs/images/Figure5.png)
+<!-- ![Figure 5 ](docs/images/Figure5.png) -->
+ 
+``` @staticmethod
+    def output_task_added():
+        """ Display output informing user task was added
+            :return: nothing
+            """
+        print(bcolors.OKGREEN + "Task was successfully added.  Displaying updated list contents...\n"
+              + bcolors.ENDC )  # bolded and blue
+ ```
  
 **Figure 5** – Using bcolors class for controlling formatting when task successfully added (code view)
 
