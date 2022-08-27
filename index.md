@@ -138,7 +138,7 @@ Figure 11 below shows the functionality when the user asks to add a task to the 
 
 Figure 12 below shows the functionality when the user asks to see contents of the current list.  
  
-**Figure 12**– Seeing Contents of the List (PyCharm)
+**Figure 12**– Seeing Contents of the List (PyCharm) 
 
 ## Summary
 This week, we built off our existing knowledge of working with lists/file to now work with binary/pickle files. We also began dealing with exception that may occur from poor user input/ unexpected behavior. We’re also continuing to learn about how to build GitHub pages which will serve as a good means to provide a personal summary and a summary of the application to the world. 
