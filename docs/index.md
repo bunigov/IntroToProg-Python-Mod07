@@ -169,40 +169,59 @@ Using this custom class, I could then use more recognizable English names to for
 ## Demo
 Here are some of the key screens in the application as demonstrated from PyCharm and Command Prompt.
 
-Figure 6 below shows the welcome screen when the user first launches the application.
+**Figure 6** below shows the welcome screen when the user first launches the application.
    
  ![Figure 6 ](images/Figure6.PNG)
+ 
 **Figure 6** – Welcome Screens (PyCharm and Command Prompt)
 
-Figure 7 below shows the functionality that allows loading of data from Pickle file. 
+<hr>
+
+**Figure 7** below shows the functionality that allows loading of data from Pickle file. 
 
   ![Figure 7 ](images/Figure7.PNG)
+  
 **Figure 7** – Loading data from Pickle file (PyCharm and Command Prompt)
 
-Figure 8 below shows the functionality that allows saving data to Pickle file. 
+<hr>
+
+**Figure 8** below shows the functionality that allows saving data to Pickle file. 
   
   ![Figure 8 ](images/Figure8.PNG) 
-**Figure 8**– Saving Data to Pickle file (PyCharm and Command Prompt)
+  
+**Figure 8** – Saving Data to Pickle file (PyCharm and Command Prompt)
 
-Figure 9 below shows the error handling functionality when the user attempts to load from a file that does not exist. 
+<hr>
+
+**Figure 9** below shows the error handling functionality when the user attempts to load from a file that does not exist. 
 
   ![Figure 9 ](images/Figure9.png)
-**Figure 9**– Attempt to load file that doesn’t exist – Error Handling (PyCharm)
+  
+**Figure 9** – Attempt to load file that doesn’t exist – Error Handling (PyCharm)
 
-Figure 10 below shows the functionality when the user asks to remove a task from the list.  This is the happy path when the specified task exists. 
+<hr>
+
+**Figure 10** below shows the functionality when the user asks to remove a task from the list.  This is the happy path when the specified task exists. 
 
 ![Figure 10 ](images/Figure10.png)
-**Figure 10**– Removing a Task (PyCharm)
+
+**Figure 10** – Removing a Task (PyCharm)
  
-Figure 11 below shows the functionality when the user asks to add a task to the list. 
+<hr>
+
+**Figure 11** below shows the functionality when the user asks to add a task to the list. 
  
  ![Figure 11 ](images/Figure11.png)
-**Figure 11**– Adding a Task (PyCharm)
+ 
+**Figure 11** – Adding a Task (PyCharm)
 
-Figure 12 below shows the functionality when the user asks to see contents of the current list.  
+<hr>
+
+**Figure 12** below shows the functionality when the user asks to see contents of the current list.  
  
   ![Figure 12 ](images/Figure12.png)
-**Figure 12**– Seeing Contents of the List (PyCharm) 
+  
+**Figure 12** – Seeing Contents of the List (PyCharm) 
 
 ## Summary
 This week, we built off our existing knowledge of working with lists/file to now work with binary/pickle files. We also began dealing with exception that may occur from poor user input/ unexpected behavior. We’re also continuing to learn about how to build GitHub pages which will serve as a good means to provide a personal summary and a summary of the application to the world. 
