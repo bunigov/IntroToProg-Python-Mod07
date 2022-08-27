@@ -102,19 +102,19 @@ Here are some of the key screens in the application as demonstrated from PyCharm
 
 Figure 6 below shows the welcome screen when the user first launches the application.
    
- ![Figure 6 ](docs/images/Figure6.png)
+ ![Figure 6 ](docs/images/Figure6.PNG)
    
 **Figure 6** – Welcome Screens (PyCharm and Command Prompt)
 
 Figure 7 below shows the functionality that allows loading of data from Pickle file. 
 
-  ![Figure 7 ](docs/images/Figure7.png)
+  ![Figure 7 ](docs/images/Figure7.PNG)
   
 **Figure 7** – Loading data from Pickle file (PyCharm and Command Prompt)
 
 Figure 8 below shows the functionality that allows saving data to Pickle file. 
   
-  ![Figure 8 ](docs/images/Figure8.png)
+  ![Figure 8 ](docs/images/Figure8.PNG)
    
 **Figure 8**– Saving Data to Pickle file (PyCharm and Command Prompt)
 
