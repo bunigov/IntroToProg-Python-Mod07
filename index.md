@@ -1,5 +1,9 @@
 
 # Working with Pickling and Error Handling
+**Dev:**: *Boris Unigovskiy*  
+**Date:** *8/24/2022*  
+**Course :** IT FDN 100 B  
+**Assignment** Assignment 7  
 
 ## Introduction
 In this week’s lectures, modules and readings, we continued learning more about how to interact with files (this week’s focus was using pickling module to work with binary files) and were introduced to structured error handling. We were provided with a basic understanding but were asked to research pickling and structured error handling on our own, a very important skill to have /have internalized outside the classroom environment. Lastly, we were given some creative freedom and were asked to simply develop an application that will demonstrate the concepts of pickling and structured error handling. 
