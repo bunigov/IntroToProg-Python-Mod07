@@ -87,7 +87,7 @@ The above functionality satisfied the requirements of the assignment to implemen
 I did some research and learned about using the ANSI code standard. Specific codes can be inserted into the print or input command to change text and background colors.  Following the following article, I created the same bcolors class (Figure 4 below). I had no need to change it, but it could be customized to any of the ANSI colors, depending on my needs. 
 https://stackoverflow.com/questions/287871/how-do-i-print-colored-text-to-the-terminal 
  
-  ![Figure 4 ](docs/images/Figure4.png)
+  ![Figure 4 ](docs/images/Figure4.png) 
  
 **Figure 4** – Custom bcolors class for controlling formatting (code view)
 
