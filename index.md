@@ -32,6 +32,7 @@ For error handling, I took the same approach. Here are the videos that I found t
 
 ## Pseudocode for Demonstrating
 As I was thinking through how to best demonstrate pickling and error handling, I looked through the last couple of assignments for inspiration.  I decided that a combination of storing a list to/restoring from binary (pickle file) and handling exceptions that may arise from interactive with the file would serve as a good demonstration of both concepts.
+
 I decided that my application would do the following:
 •	Show user list of menu options
 •	Allow user to see current data in the list (memory)
@@ -40,6 +41,7 @@ I decided that my application would do the following:
 •	Allow user to load data from a pickle file 
 •	Allow user to save data to a pickle file
 •	Allow user to exit the program
+
 I also decided that my application would perform the following error handling (some of these would not be console error but would simply not make sense so I decided to prevent it as well)
 •	Handle user attempting to load data from a non-existent file (FileNotFoundError handling)
 •	Advise user when asking to see current data in the list that the list is empty (custom message)
@@ -52,10 +54,12 @@ I also decided that I would follow a similar structure of using classes (Process
 To have some data to work with (and not wanting to hardcode the values), I reused the code from earlier weeks to create a list of dictionaries. This would contain Tasks and Priorities and represent a ToDo list. The list would be preinitialized by the application with the user having the option to add new tasks to it. 
 The code to add data to the list looked as shown in Figure 1 below.  It asks the user to first enter a task, then to enter a priority. After, it calls a function to append this data to the list, displays confirmation that it was added and shows the updated contents of the list.  I will demonstrate the UI later in this document. 
  
+ ![Figure 1 ](./images/Figure1.png)
 **Figure 1** – Adding data to the list (code view)
 
 ## Saving to a Pickle File
 Having data in a list (in memory), I was then able to work on the code to load this data to a Pickle file.  The code to save the file looked as shown in Figure 2 below. It first asks the user for a filename to write to (e.g. AppData.dat), opens the file in write binary mode, (intentional decision to overwrite file each time), dumps the list contents to that file and then displays a confirmation message to the user as well as the absolute location of the pickle file (I thought this would be helpful to the user). 
+
 Couple things to note here. I decided that it would not make sense to same an empty list to a file so I added an if statement that would first check for this logical error and advise the user if the list was empty. Since the list of functions was growing, I intentionally left a couple print statements in this main portion of the code as they were not adding to the complexity. 
  
 **Figure 2** – Saving list data to Pickle file (code view)
@@ -74,6 +78,7 @@ Couple of things to note here. I tested both the happy path (providing the right
 
 ## Enhancing the User Experience / Application
 The above functionality satisfied the requirements of the assignment to implement pickling (saving and loading) and error handling (handling a FileNotFoundError) but I wanted to do more. I had already at every step tried to provide extra messaging / information to the user, but I wanted to add some color to the application. 
+
 I did some research and learned about using the ANSI code standard. Specific codes can be inserted into the print or input command to change text and background colors.  Following the following article, I created the same bcolors class (Figure 4 below). I had no need to change it, but it could be customized to any of the ANSI colors, depending on my needs. 
 https://stackoverflow.com/questions/287871/how-do-i-print-colored-text-to-the-terminal 
  
@@ -119,4 +124,5 @@ Figure 12 below shows the functionality when the user asks to see contents of th
 
 ## Summary
 This week, we built off our existing knowledge of working with lists/file to now work with binary/pickle files. We also began dealing with exception that may occur from poor user input/ unexpected behavior. We’re also continuing to learn about how to build GitHub pages which will serve as a good means to provide a personal summary and a summary of the application to the world. 
+
 Looking forward to learning new concepts that will allow me to build more complex and useful applications. 
