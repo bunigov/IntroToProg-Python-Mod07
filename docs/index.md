@@ -15,13 +15,13 @@ I find YouTube to be one of the best sources for understanding technical subject
 
 For pickling, I found the following videos to be the most useful.  They provided similar information about the open, dump, load, close functions but all with slightly different ways of explaining it. Hearing it several times from multiple people helped with the understanding of them content.
 
-- https://www.youtube.com/watch?v=2Tw39kZIbhs 
-- https://www.youtube.com/watch?v=6wSFWOleZlc 
-- https://www.youtube.com/watch?v=Pl4Hp8qwwes 
-- https://www.youtube.com/watch?v=qt15PnF8x-M 
-- https://www.youtube.com/watch?v=XzkhtWYYojg 
-- https://www.youtube.com/watch?v=MsRvqMxOryM 
-- https://www.youtube.com/watch?v=YBz3ERXQw_M 
+- (https://www.youtube.com/watch?v=2Tw39kZIbhs) 
+- (https://www.youtube.com/watch?v=6wSFWOleZlc) 
+- (https://www.youtube.com/watch?v=Pl4Hp8qwwes) 
+- (https://www.youtube.com/watch?v=qt15PnF8x-M) 
+- (https://www.youtube.com/watch?v=XzkhtWYYojg) 
+- (https://www.youtube.com/watch?v=MsRvqMxOryM) 
+- (https://www.youtube.com/watch?v=YBz3ERXQw_M) 
 
 ## Self-Research on Exceptions/Error Handling
 For error handling, I took the same approach. Here are the videos that I found the most useful. They also provided similar information about the try, except, else, finally structure but with also with different ways of explaining it.  
