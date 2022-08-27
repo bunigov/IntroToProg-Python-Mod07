@@ -6,27 +6,29 @@ In this week’s lectures, modules and readings, we continued learning more abou
 
 ## Self-Research on Pickling
 I find YouTube to be one of the best sources for understanding technical subjects. Thousands of technical experts give back to the community this way by explaining complex subjects to those entering the field or wanting the refresher. With the abundance of material, if one video doesn’t explain clearly, another video likely will. Through these videos, these experts provide interesting commentary and real-life best practices that you likely won’t find in technical documentation as well as the ability to interact with the poster and other watchers via comments. 
+
 For pickling, I found the following videos to be the most useful.  They provided similar information about the open, dump, load, close functions but all with slightly different ways of explaining it. Hearing it several times from multiple people helped with the understanding of them content.
-https://www.youtube.com/watch?v=2Tw39kZIbhs 
-https://www.youtube.com/watch?v=6wSFWOleZlc 
-https://www.youtube.com/watch?v=Pl4Hp8qwwes 
-https://www.youtube.com/watch?v=qt15PnF8x-M 
-https://www.youtube.com/watch?v=XzkhtWYYojg 
-https://www.youtube.com/watch?v=MsRvqMxOryM 
-https://www.youtube.com/watch?v=YBz3ERXQw_M 
+
+- https://www.youtube.com/watch?v=2Tw39kZIbhs 
+- https://www.youtube.com/watch?v=6wSFWOleZlc 
+- https://www.youtube.com/watch?v=Pl4Hp8qwwes 
+- https://www.youtube.com/watch?v=qt15PnF8x-M 
+- https://www.youtube.com/watch?v=XzkhtWYYojg 
+- https://www.youtube.com/watch?v=MsRvqMxOryM 
+- https://www.youtube.com/watch?v=YBz3ERXQw_M 
 
 ## Self-Research on Exceptions/Error Handling
 For error handling, I took the same approach. Here are the videos that I found the most useful. They also provided similar information about the try, except, else, finally structure but with also with different ways of explaining it.  
-https://www.youtube.com/watch?v=NIWwJbo-9_8 
-https://www.youtube.com/watch?v=6SPDvPK38tw 
-https://www.youtube.com/watch?v=nlCKrKGHSSk
-https://www.youtube.com/watch?v=HQqqNBZosn8
-https://www.youtube.com/watch?v=MImAiZIzzd4
-https://www.youtube.com/watch?v=brICUKrzVR0
-https://www.youtube.com/watch?v=KdMAj8Et4xk
-https://www.youtube.com/watch?v=65rz-L5ppDo
-https://www.youtube.com/watch?v=j_q6NGOwDJo
-https://www.youtube.com/watch?v=06HauGzxc9s 
+- https://www.youtube.com/watch?v=NIWwJbo-9_8 
+- https://www.youtube.com/watch?v=6SPDvPK38tw 
+- https://www.youtube.com/watch?v=nlCKrKGHSSk
+- https://www.youtube.com/watch?v=HQqqNBZosn8
+- https://www.youtube.com/watch?v=MImAiZIzzd4
+- https://www.youtube.com/watch?v=brICUKrzVR0
+- https://www.youtube.com/watch?v=KdMAj8Et4xk
+- https://www.youtube.com/watch?v=65rz-L5ppDo
+- https://www.youtube.com/watch?v=j_q6NGOwDJo
+- https://www.youtube.com/watch?v=06HauGzxc9s 
 
 ## Pseudocode for Demonstrating
 As I was thinking through how to best demonstrate pickling and error handling, I looked through the last couple of assignments for inspiration.  I decided that a combination of storing a list to/restoring from binary (pickle file) and handling exceptions that may arise from interactive with the file would serve as a good demonstration of both concepts.
