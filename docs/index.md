@@ -58,7 +58,7 @@ I also decided that I would follow a similar structure of using classes (Process
 To have some data to work with (and not wanting to hardcode the values), I reused the code from earlier weeks to create a list of dictionaries. This would contain Tasks and Priorities and represent a ToDo list. The list would be preinitialized by the application with the user having the option to add new tasks to it. 
 The code to add data to the list looked as shown in Figure 1 below.  It asks the user to first enter a task, then to enter a priority. After, it calls a function to append this data to the list, displays confirmation that it was added and shows the updated contents of the list.  I will demonstrate the UI later in this document. 
  
-<!-- ![Figure 1 ](docs/images/Figure1.png) -->
+<!-- ![Figure 1 ](images/Figure1.png) -->
  
 ```
 #Add data to the list - write
@@ -75,7 +75,7 @@ Having data in a list (in memory), I was then able to work on the code to load t
 
 Couple things to note here. I decided that it would not make sense to same an empty list to a file so I added an if statement that would first check for this logical error and advise the user if the list was empty. Since the list of functions was growing, I intentionally left a couple print statements in this main portion of the code as they were not adding to the complexity. 
  
- <!-- ![Figure 2 ](docs/images/Figure2.png) -->
+ <!-- ![Figure 2 ](images/Figure2.png) -->
  
  ```
  #Save data to Pickle file
@@ -99,7 +99,7 @@ While I could see the file was written to the directory, I couldn’t validate i
 The code to load the file is shown in Figure 3 below.  The code first asks the user for filename of the Pickle file to load from. It attempts to read and load this file into a temporary objFileData object in memory (presenting a success message if successful), iterates through that object to get a dictionary row and then builds a table_list table object. It completes by presenting confirmation to the user of successful data load into the list and shows the contents of the list (code reuses from previous week’s as well as provided as an option if user just wants to the see the contents of the list). 
 The code uses structured error handling. All of the above commands are in a try block so if anything fails (e.g. file is not found), the below except block catches the error and presents information to the user gracefully advising them that their file cannot be found (as opposed to the application crashing)
  
- <!-- ![Figure 3 ](docs/images/Figure3.png) -->
+ <!-- ![Figure 3 ](images/Figure3.png) -->
  
  ```
  #Retrieve/load data from Pickle file, load back into the list
@@ -136,7 +136,7 @@ The above functionality satisfied the requirements of the assignment to implemen
 I did some research and learned about using the ANSI code standard. Specific codes can be inserted into the print or input command to change text and background colors.  Following the following article, I created the same bcolors class (Figure 4 below). I had no need to change it, but it could be customized to any of the ANSI colors, depending on my needs. 
 https://stackoverflow.com/questions/287871/how-do-i-print-colored-text-to-the-terminal 
  
- <!-- ![Figure 4 ](docs/images/Figure4.png)  -->
+ <!-- ![Figure 4 ](images/Figure4.png)  -->
 ```
 class bcolors:  #for simplifying color display of messages
     HEADER = '\033[95m'
@@ -153,7 +153,7 @@ class bcolors:  #for simplifying color display of messages
 
 Using this custom class, I could then use more recognizable English names to format the output to the user. As shown in Figure 5 example below, I display a “task successfully added” message in green to the user. 
 
-<!-- ![Figure 5 ](docs/images/Figure5.png) -->
+<!-- ![Figure 5 ](images/Figure5.png) -->
  
 ``` @staticmethod
     def output_task_added():
@@ -171,37 +171,37 @@ Here are some of the key screens in the application as demonstrated from PyCharm
 
 Figure 6 below shows the welcome screen when the user first launches the application.
    
- ![Figure 6 ](docs/images/Figure6.PNG)
+ ![Figure 6 ](images/Figure6.PNG)
    
 **Figure 6** – Welcome Screens (PyCharm and Command Prompt)
 
 Figure 7 below shows the functionality that allows loading of data from Pickle file. 
 
-  ![Figure 7 ](docs/images/Figure7.PNG)
+  ![Figure 7 ](images/Figure7.PNG)
   
 **Figure 7** – Loading data from Pickle file (PyCharm and Command Prompt)
 
 Figure 8 below shows the functionality that allows saving data to Pickle file. 
   
-  ![Figure 8 ](docs/images/Figure8.PNG)
+  ![Figure 8 ](images/Figure8.PNG)
    
 **Figure 8**– Saving Data to Pickle file (PyCharm and Command Prompt)
 
 Figure 9 below shows the error handling functionality when the user attempts to load from a file that does not exist. 
 
-  ![Figure 9 ](docs/images/Figure9.png)
+  ![Figure 9 ](images/Figure9.png)
   
 **Figure 9**– Attempt to load file that doesn’t exist – Error Handling (PyCharm)
 
 Figure 10 below shows the functionality when the user asks to remove a task from the list.  This is the happy path when the specified task exists. 
 
-![Figure 10 ](docs/images/Figure10.png)
+![Figure 10 ](images/Figure10.png)
  
 **Figure 10**– Removing a Task (PyCharm)
  
 Figure 11 below shows the functionality when the user asks to add a task to the list. 
  
- ![Figure 11 ](docs/images/Figure11.png)
+ ![Figure 11 ](images/Figure11.png)
   
 **Figure 11**– Adding a Task (PyCharm)
 
