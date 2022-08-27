@@ -4,7 +4,8 @@
 **Date:** *8/24/2022*  
 **Course :** IT FDN 100 B  
 **Assignment** Assignment 7  
-**Links** https://github.com/bunigov/IntroToProg-Python-Mod07  https://bunigov.github.io/IntroToProg-Python-Mod07/  
+[https://github.com/bunigov/IntroToProg-Python-Mod07](https://github.com/bunigov/IntroToProg-Python-Mod07)
+[https://bunigov.github.io/IntroToProg-Python-Mod07/](https://bunigov.github.io/IntroToProg-Python-Mod07/)   
 
 
 ## Introduction
@@ -25,16 +26,16 @@ For pickling, I found the following videos to be the most useful.  They provided
 
 ## Self-Research on Exceptions/Error Handling
 For error handling, I took the same approach. Here are the videos that I found the most useful. They also provided similar information about the try, except, else, finally structure but with also with different ways of explaining it.  
-- https://www.youtube.com/watch?v=NIWwJbo-9_8 
-- https://www.youtube.com/watch?v=6SPDvPK38tw 
-- https://www.youtube.com/watch?v=nlCKrKGHSSk
-- https://www.youtube.com/watch?v=HQqqNBZosn8
-- https://www.youtube.com/watch?v=MImAiZIzzd4
-- https://www.youtube.com/watch?v=brICUKrzVR0
-- https://www.youtube.com/watch?v=KdMAj8Et4xk
-- https://www.youtube.com/watch?v=65rz-L5ppDo
-- https://www.youtube.com/watch?v=j_q6NGOwDJo
-- https://www.youtube.com/watch?v=06HauGzxc9s 
+- [https://www.youtube.com/watch?v=NIWwJbo-9_8](https://www.youtube.com/watch?v=NIWwJbo-9_8)  
+- [https://www.youtube.com/watch?v=6SPDvPK38tw](https://www.youtube.com/watch?v=6SPDvPK38tw)  
+- [https://www.youtube.com/watch?v=nlCKrKGHSSk](https://www.youtube.com/watch?v=nlCKrKGHSSk)
+- [https://www.youtube.com/watch?v=HQqqNBZosn8](https://www.youtube.com/watch?v=HQqqNBZosn8)
+- [https://www.youtube.com/watch?v=MImAiZIzzd4](https://www.youtube.com/watch?v=MImAiZIzzd4)
+- [https://www.youtube.com/watch?v=brICUKrzVR0](https://www.youtube.com/watch?v=brICUKrzVR0)
+- [https://www.youtube.com/watch?v=KdMAj8Et4xk](https://www.youtube.com/watch?v=KdMAj8Et4xk)
+- [https://www.youtube.com/watch?v=65rz-L5ppDo](https://www.youtube.com/watch?v=65rz-L5ppDo)
+- [https://www.youtube.com/watch?v=j_q6NGOwDJo](https://www.youtube.com/watch?v=j_q6NGOwDJo)
+- [https://www.youtube.com/watch?v=06HauGzxc9s](https://www.youtube.com/watch?v=06HauGzxc9s)
 
 ## Pseudocode for Demonstrating
 As I was thinking through how to best demonstrate pickling and error handling, I looked through the last couple of assignments for inspiration.  I decided that a combination of storing a list to/restoring from binary (pickle file) and handling exceptions that may arise from interactive with the file would serve as a good demonstration of both concepts.
